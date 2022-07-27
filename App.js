@@ -15,7 +15,6 @@ export default class App extends Component {
   _bootstrapAsync = () => {
 
     store.dispatch(loadTokenFromStorage()).then(() => {
-      console.log('hujpizda');
       console.log(this.props.navigation)
       return this.props.navigation.navigate(store.getState().driver.token !== null ? 'Main' : 'Login');
     })
